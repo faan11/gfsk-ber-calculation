@@ -1,8 +1,9 @@
+import jdk.dynalink.beans.StaticClass;
 import net.sourceforge.jdistlib.math.Bessel;
 
 class GFSKModulation {
 
-    public Double computeBer(Double SNR,Double h) {
+    public static Double computeBer(Double SNR, Double h) {
         Double a;
         Double b;
         Double p;
@@ -14,7 +15,7 @@ class GFSKModulation {
         return exp;
     }
 
-    private Double performSeries(Double a, Double b) {
+    private static Double performSeries(Double a, Double b) {
         boolean converges = false;
         Double result = 0.0;
         Double prev;
